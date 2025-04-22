@@ -1,7 +1,9 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
 
-// RIVER ANIMATION USING P5.js //
+/* RIVER ANIMATION USING P5.js 
+
+Making into a comment for now cause it's stressing me out. I don't think I have time to learn p5.js. :'()
 
 let ripple = false;
 let riverSound; 
@@ -36,7 +38,6 @@ function draw() {
   }
 
 
-
  }
 
  function mouseMoved() {
@@ -47,6 +48,7 @@ function draw() {
   ripple = false;
  }
 
+*/ 
 
 
 

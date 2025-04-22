@@ -1,11 +1,260 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START BY IMPORTING YOUR FONTS ===== */ 
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Neucha&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Special+Gothic+Expanded+One&family=Tenor+Sans&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 /* ===== NEXT WRITE GLOBAL STYLES, THEN USE MEDIA QUERIES FOR LAYOUT/STYLE ADJUSTMENTS ===== */
 /* ===== STARTER CSS BELOW FOR body AND p IS JUST AN EXAMPLE... YOU MAY DELETE IT ===== */
 
+
 body {
-    background: magenta;
+    background: #FFFFE8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-p {
+
+
+h1 {
+    font-family: "Neucha", cursive;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    font-family: "Neucha", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
     font-size: 2em;
+    font-family: "Neucha", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+
+
+p {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    font-family: "Neucha", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* MAP */
+
+.map-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    overflow: visible;
+}
+
+.map-image {
+    width: 100%;
+    height: auto: 
+    display: block; 
+    border-radius: 10%;
+}
+
+/* INDIVIDUAL LOCATIONS */
+
+#church {
+    position: absolute;
+    width: 30%;
+    cursor: pointer; 
+    top: 15%;
+    left: 67%;
+}
+
+#camp-residence {
+    position: absolute;
+    width: 20%;
+    cursor: pointer; 
+    top: 50%;
+    left: 60%;
+}
+
+#big-cave {
+    position: absolute;
+    width: 20%;
+    cursor: pointer; 
+    top: 67%;
+    left: 40%;
+}
+
+#small-cave {
+    position: absolute;
+    width: 13%;
+    cursor: pointer;
+    top: 66%;
+    left: 23%;
+}
+
+
+/* INDIVIDUAL LOCATIONS - HOVER & ACTIVE */
+
+.location {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.location:hover {
+    transform: translate(-50%, -50%) scale(1.6);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+.location:active {
+    transform: translate(-50%, -50%) scale(1.68);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+/* POPUP */
+
+#popup {
+    position: fixed;
+    top: 30%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: #D1FFF7; 
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px; 
+    border: 5px solid #B2CB21;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#close-btn {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #B2CB21;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  #close-btn:hover {
+    color: #000;
+  }
+
+
+/* VIDEO - SUBMERGED */
+
+
+.video h2 {
+    padding-top: 10px;
+}
+
+.video {
+    flex-direction: column;
+    border: 4px solid #B2CB21;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%; 
+    aspect-ratio: 16/9;
+}
+
+.video video {
+    box-shadow: none;
+    width: 70&;
+    height: 70%;
+    display: block;
+    object-fit: cover;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* MAP SVG STYLING */
+
+.cls-1 {
+    fill: #c1cc99;
+  }
+
+  .cls-2, .cls-3 {
+    fill: #ffffe8;
+  }
+
+  .cls-4 {
+    fill: #78b1e1;
+    stroke: #78b1e1;
+  }
+
+  .cls-4, .cls-5 {
+    stroke-width: 3px;
+  }
+
+  .cls-4, .cls-5, .cls-6, .cls-3 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-5 {
+    fill: #dde89d;
+  }
+
+  .cls-5, .cls-3 {
+    stroke: #b2cb21;
+  }
+
+  .cls-6 {
+    fill: #ccc;
+    stroke: #ccc;
+    stroke-width: 2px;
+  }
+
+  .cls-3 {
+    stroke-width: 9px;
+  }
+
+/* MAP - INTERACTION (EXPERIMENT) */
+
+#river {
+    cursor: pointer; 
+    transition: stroke 0.4s ease, stroke-width 0.4s ease; 
+}
+
+#river:hover {
+    stroke: #4fc3f7;
+    stroke-width: 5;
+    filter: drop-shadow(0 0 8px #4fc3f7);
+
+}
+
+/* MAP RIVER EXPERIMENT */
+
+#p5-river {
+    position: absolute; 
+    top: 250px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+    z-index: 1;
 }

@@ -44,6 +44,21 @@ h3 {
     padding-left: 20%;
 }
 
+h3 a {
+  font-size: 2rem;
+  font-family: "Neucha", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  border-bottom: 5px solid #B2CB21;
+}
+
+h3 a:hover {
+  background-color: #B2CB21;
+  padding-top: 2%;
+}
+
 
 p {
     font-size: 1.4em;
@@ -62,7 +77,7 @@ p {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .map-image {
@@ -72,14 +87,16 @@ p {
     border-radius: 10%;
 }
 
+
+
 /* INDIVIDUAL LOCATIONS */
 
 #church {
     position: absolute;
     width: 30%;
     cursor: pointer; 
-    top: 15%;
-    left: 67%;
+    top: 12%;
+    left: 61%;
 }
 
 #camp-residence {
@@ -87,42 +104,51 @@ p {
     width: 20%;
     cursor: pointer; 
     top: 50%;
-    left: 60%;
+    left: 58%;
 }
 
 #big-cave {
     position: absolute;
     width: 20%;
     cursor: pointer; 
-    top: 67%;
-    left: 40%;
+    top: 64%;
+    left: 35%;
 }
 
 #small-cave {
     position: absolute;
     width: 13%;
     cursor: pointer;
-    top: 66%;
-    left: 23%;
+    top: 68%;
+    left: 20%;
 }
 
 
 /* INDIVIDUAL LOCATIONS - HOVER & ACTIVE */
 
-.location {
+/*.location {
     position: absolute;
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease, filter 0.2s ease;
+} */
+
+@keyframes dance {
+  0% {transform: translate(-50%, -52%) rotate(-2deg) scale(1.3);}
+  40% {transform: translate(-50%, -48%) rotate(5deg) scale(1.3);}
+  100% {transform: translate(-50%, -52%) rotate(-4deg) scale(1.3);}
 }
+
+.location {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, filter 0.2s ease
+}
+
 
 .location:hover {
-    transform: translate(-50%, -50%) scale(1.6);
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-}
-
-.location:active {
-    transform: translate(-50%, -50%) scale(1.68);
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+  animation: dance 0.6s infinite ease-in-out;
+  transform: translate(-50%, -50%) scale(1.3);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
 /* POPUP */
@@ -195,44 +221,146 @@ p {
 /* MAP SVG STYLING */
 
 .cls-1 {
-    fill: #c1cc99;
-  }
+  fill: #c1cc99;
+}
 
-  .cls-2, .cls-3 {
-    fill: #ffffe8;
-  }
+.cls-2 {
+  fill: #eed8a2;
+  stroke: #e4c16c;
+}
 
-  .cls-4 {
-    fill: #78b1e1;
-    stroke: #78b1e1;
-  }
+.cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+  stroke-miterlimit: 10;
+}
 
-  .cls-4, .cls-5 {
-    stroke-width: 3px;
-  }
+.cls-2, .cls-5, .cls-12 {
+  stroke-width: 4px;
+}
 
-  .cls-4, .cls-5, .cls-6, .cls-3 {
-    stroke-miterlimit: 10;
-  }
+.cls-3, .cls-4, .cls-7, .cls-8, .cls-11 {
+  fill: #ccc;
+}
 
-  .cls-5 {
-    fill: #dde89d;
-  }
+.cls-3, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-13 {
+  stroke-width: 3px;
+}
 
-  .cls-5, .cls-3 {
-    stroke: #b2cb21;
-  }
+.cls-3, .cls-13 {
+  stroke: #999;
+}
 
-  .cls-6 {
-    fill: #ccc;
-    stroke: #ccc;
-    stroke-width: 2px;
-  }
+.cls-15 {
+  font-size: 41.34px;
+}
 
-  .cls-3 {
-    stroke-width: 9px;
-  }
+.cls-15, .cls-16, .cls-14 {
+  fill: #ffffe8;
+}
 
+.cls-15, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+  font-family: Neucha, Neucha;
+}
+
+.cls-4 {
+  stroke: #b8b9b9;
+}
+
+.cls-4, .cls-11 {
+  stroke-width: 2px;
+}
+
+.cls-27 {
+  fill: #b2cb21;
+}
+
+.cls-5, .cls-28 {
+  fill: #84b866;
+}
+
+.cls-5, .cls-10, .cls-12, .cls-14 {
+  stroke: #b2cb21;
+}
+
+.cls-29, .cls-12 {
+  fill: #84b866;
+}
+
+.cls-6, .cls-7 {
+  stroke: gray;
+}
+
+.cls-6, .cls-13 {
+  fill: #b3b3b3;
+}
+
+.cls-30 {
+  fill: #e4c16c;
+}
+
+.cls-31 {
+  fill: #e4c16c;
+}
+
+.cls-17 {
+  font-size: 32.52px;
+}
+
+.cls-18 {
+  font-size: 32.32px;
+}
+
+.cls-19 {
+  font-size: 30.59px;
+}
+
+.cls-20 {
+  font-size: 36px;
+}
+
+.cls-21 {
+  font-size: 25.29px;
+}
+
+.cls-22 {
+  font-size: 25.14px;
+}
+
+.cls-23 {
+  font-size: 25.02px;
+}
+
+.cls-24 {
+  font-size: 24.14px;
+}
+
+.cls-25 {
+  font-size: 27px;
+}
+
+.cls-8 {
+  stroke: #b3b3b3;
+}
+
+.cls-9 {
+  fill: #78b1e1;
+  stroke: #78b1e1;
+}
+
+.cls-10 {
+  fill: #dde89d;
+}
+
+.cls-11 {
+  stroke: #ccc;
+}
+
+.cls-26 {
+  font-size: 48px;
+}
+
+.cls-14 {
+  stroke-width: 9px;
+}
 /* MAP - INTERACTION (EXPERIMENT) */
 
 
@@ -296,29 +424,57 @@ p {
 
 /* LINKS */
 
+
+.about {
+    width: 100%;
+}
+
+
 .about-link {
     font-family: "Neucha", cursive;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    max-width: fit-content;
     font-size: 2.1rem;
     text-decoration: none;
     color: #000;
-    /*justify-content: flex-end;*/
     border: 4px solid #B2CB21;
     border-radius: 10px;
-    margin: 20px;
-    padding: 10px 20px;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    padding: 2px 20px;
     background-color: #D1FFF7;
-    display: flex;
-    justify-content: end;
-    position: relative;
+    float: right;
 
 }
+
+.about-link:hover {
+    background-color: #b2cb21;
+    border: 4px solid #D1FFF7;
+}
+
 
 
 .project-introduction p {
     display: block;
     padding-right: 20%;
     padding-left: 20%;
+    line-height: 160%;
 }
+
+.project-introduction a {
+    text-decoration: none;
+    border-bottom: 3px solid #B2CB21;
+    color: black;
+    font-weight: 900;
+    padding: 2px;
+}
+
+.project-introduction a:hover {
+    background-color: #B2CB21;
+    padding-top: 0.6%;
+
+}
+
+ 

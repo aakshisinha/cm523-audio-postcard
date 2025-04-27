@@ -1,60 +1,7 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
 
-/* RIVER ANIMATION USING P5.js 
-
-Making into a comment for now cause it's stressing me out. I don't think I have time to learn p5.js. :'()
-
-let ripple = false;
-let riverSound; 
-let mute = false;
-
-function preload() {
-  riverSound = loadSound("audio/streambox-owl.wav");
-}
-
-function setup() {
-  let cnv = createCanvas(windowWidth, 300);
-  cnv.parent("p5-river");
-  noStroke();
-  riverSound.setLoop(true);
-}
-
-function draw() {
-  clear();
-  background(0, 0, 255, 30);
-
-  fill(173, 216, 230, 150);
-  for (let x = 0; x < width; x += 20) {
-    let y = 150 + sin((frameCount + x) * 0.05) * 10;
-    ellipse(x, y, 20, ripple ? 25 : 10);
-
-  }
-
-  if (ripple && !riverSound.isPlaying() && !mute) {
-    riverSound.play();
-  } else if (!ripple && riverSound.isPlaying()) {
-    riverSound.stop();
-  }
-
-
- }
-
- function mouseMoved() {
-  ripple = mouseY > 0 && mouseY < 300;
- }
-
- function mouseOut() {
-  ripple = false;
- }
-
-*/ 
-
-
-
-/* POPUP */
-
-
+/* POPUP - GLOBALS */
 const locations = document.querySelectorAll('.location');
 const popup = document.getElementById('popup');
 const popupTitle = document.getElementById('popup-title');
@@ -62,6 +9,17 @@ const popupText = document.getElementById('popup-text');
 const popupAudio = document.getElementById('popup-audio');
 const closeBtn = document.getElementById('close-btn');
 
+/* MAP - CLICK ZOOM GLOBALS */
+const map = document.getElementById("map");
+const mainBorder = document.getElementById("Main_Border");
+const secondBorder = document.getElementById("Second_Border");
+const church = document.getElementById("church");
+const campResidence = document.getElementById("camp-residence");
+const bigCave = document.getElementById("big-cave");
+const smallCave = document.getElementById("small-cave");
+
+
+/* POPUP GENERATOR */
 
 locations.forEach(loc => {
   loc.addEventListener('click', () => {
@@ -90,4 +48,68 @@ closeBtn.addEventListener('click', () => {
 
   locations.forEach(loc => loc.classList.remove('active'));
 });
+
+
+/* MAP - CLICK ZOOM FUNCTIONALITY */
+
+let churchClicked=false; 
+let campResidenceClicked=false;
+let smallCaveClicked=false;
+let bigCaveClicked=false;
+
+
+
+function revertAll(){
+    churchClicked=
+    campResidenceClicked=
+    smallCaveClicked=
+    bigCaveClicked=false;
+    gsap.to(map, {
+      attr:{ViewBox:"0 0 1920 1080"}
+
+    });
+};
+
+let church_min = gsap.to(map, {
+  paused:true,
+  attr:{viewBox:"0 0 1700 1400"}
+});
+let campResidence_min = gsap.to(map, {
+  paused:true, 
+  attr:{viewBox:"0 0 1700 1400"}
+});
+let smallCave_min = gsap.to(map, {
+  paused:true,
+  attr:{viewBox:"0 300 400 400"}
+});
+let bigCave_min = gsap.to(map, {
+  paused:true,
+  attr:{viewBox:"350 250 400 400"}
+});
+
+secondBorder.addEventListener("click", function(){
+    revertAll();
+});
+
+church.addEventListener("click", function(){
+  if(!churchClicked){
+    church_min.play(0);
+    churchClicked=true;
+  }else{
+    revertAll();
+  }
+  console.log(churchClicked);
+});
+campResidence.addEventListener("click", function(){
+  if(!campResidenceClicked){
+    campResidence_min.play(0);
+    campResidenceClicked=true;
+  }else{
+    revertAll();
+  }
+  console.log(campResidenceClicked);
+});
+
+
+
 

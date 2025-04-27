@@ -1,71 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1cc99;
+      }
 
-    <!-- PUT A TITLE IN HERE -->
-    <title>Audio Postcard</title>
+      .cls-2 {
+        fill: #eed8a2;
+        stroke: #e4c16c;
+      }
 
-    <!-- PUT A DESCRIPTION IN HERE -->
-    <meta name="description" content="describe content of the page here...." />
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        stroke-miterlimit: 10;
+      }
 
-    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
-    <link rel="stylesheet" href="styles/normalize.css" />
+      .cls-2, .cls-5, .cls-12 {
+        stroke-width: 4px;
+      }
 
-    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+      .cls-3, .cls-4, .cls-7, .cls-8, .cls-11 {
+        fill: #ccc;
+      }
 
-    <!-- LINK TO YOUR STYLES -->
-    <link rel="stylesheet" href="styles/styles.css" />
+      .cls-3, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-13 {
+        stroke-width: 3px;
+      }
 
-    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+      .cls-3, .cls-13 {
+        stroke: #999;
+      }
 
+      .cls-15 {
+        font-size: 41.34px;
+      }
 
-    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
-  </head>
-  <body>
+      .cls-15, .cls-16, .cls-14 {
+        fill: #ffffe8;
+      }
 
-     <!--github link: https://aakshisinha.github.io/cm523-audio-postcard/ -->
-     
-    <!-- YOUR HTML GOES HERE -->
+      .cls-15, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+        font-family: Neucha, Neucha;
+      }
 
+      .cls-4 {
+        stroke: #b8b9b9;
+      }
 
-    <div class="about">
-      <a class="about-link" href="about.html">About</a>
-    </div>
-   
+      .cls-4, .cls-11 {
+        stroke-width: 2px;
+      }
 
-    <div class="description">
-      <h1>Sounds from Aulus</h1>
-      <h3>Hi! I am Aakshi.</h3>
-      <h3>This interactive map features sounds I recorded in southern French town, Aulus-les-Bains, during my stay at  <a href="https://www.campfr.com/">Camp FR</a></h3>
-      <h3>Click on the map below to start exploring Aulus.</h3>
-    </div>
-    
-   
+      .cls-27 {
+        fill: #b2cb21;
+      }
 
-    <!-- MAP - EXPERIMENT -->
+      .cls-5, .cls-28 {
+        fill: #84b866;
+      }
 
+      .cls-5, .cls-10, .cls-12, .cls-14 {
+        stroke: #b2cb21;
+      }
 
+      .cls-29, .cls-12 {
+        fill: #84b866;
+      }
 
-    <!-- MAP -->
+      .cls-6, .cls-7 {
+        stroke: gray;
+      }
 
-    <div class="map-container">
+      .cls-6, .cls-13 {
+        fill: #b3b3b3;
+      }
 
-      <!-- ANIMATED RIVER EXPERIMENT w/p5.js -->
+      .cls-30 {
+        fill: #e4c16c;
+      }
 
-      <div id="p5-river"></div>
+      .cls-31 {
+        fill: #e4c16c;
+      }
 
+      .cls-17 {
+        font-size: 32.52px;
+      }
 
-      <!-- MAP - SVG Experiment -->
+      .cls-18 {
+        font-size: 32.32px;
+      }
 
-      <?xml version="1.0" encoding="UTF-8"?>
-      <svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-        g id="Map">
-    <g> id="Second_Border" data-name="Second Border">
+      .cls-19 {
+        font-size: 30.59px;
+      }
+
+      .cls-20 {
+        font-size: 36px;
+      }
+
+      .cls-21 {
+        font-size: 25.29px;
+      }
+
+      .cls-22 {
+        font-size: 25.14px;
+      }
+
+      .cls-23 {
+        font-size: 25.02px;
+      }
+
+      .cls-24 {
+        font-size: 24.14px;
+      }
+
+      .cls-25 {
+        font-size: 27px;
+      }
+
+      .cls-8 {
+        stroke: #b3b3b3;
+      }
+
+      .cls-9 {
+        fill: #78b1e1;
+        stroke: #78b1e1;
+      }
+
+      .cls-10 {
+        fill: #dde89d;
+      }
+
+      .cls-11 {
+        stroke: #ccc;
+      }
+
+      .cls-26 {
+        font-size: 48px;
+      }
+
+      .cls-14 {
+        stroke-width: 9px;
+      }
+    </style>
+  </defs>
+  <g id="Map">
+    <g id="Second_Border" data-name="Second Border">
       <rect class="cls-1" x="344.47" y="172.6" width="1272.34" height="752.46" rx="12" ry="12"/>
     </g>
     <g id="Green_Space" data-name="Green Space">
@@ -129,6 +210,7 @@
       <path class="cls-10" d="M1625.07,547.89c-1.94,2.25-21.97,11.28-26.98,15.38s-23.95,21.29-26.27,23.53,18.12,10.25,24.14,13.75,24.14,11.79,29.41,15.69,25.58,21.23,25.58,21.23l3.16-72.9-29.04-16.67Z"/>
       <path class="cls-10" d="M1240.17,766.35c-1.06-.56,2.38-1.75,3.53-2.08,3.65-1.05,13.72-1.29,15.87-3.37,3.27-3.16,6.27-7.21,10.38-8.02s5.94-4.88,11.51-5.95,11.13-.4,15.24-1.5c3.34-.89,6.3-2.18,7.3-2.63.24-.11.49-.14.75-.1,2.48.4,16,2.58,22.09,2.95,6.73.41,18.69,2.36,25.74.72s29.93-4.48,35.82-6.72,13.54-4.75,13.54-4.75c0,0-17.4,7.61-20.65,9.9s-10.76,13.28-14.36,18.49-10.55,18.26-12.66,21.74c-1.52,2.5-2.71,3.8-3.26,4.33-.2.2-.46.31-.74.35-3.21.42-24.74,3.13-34.47,2.5-10.52-.68-22.5-2.34-31.2-6.88s-19.18-7.6-29.49-13.06l-14.97-5.9Z"/>
     </g>
+  </g>
   <g id="Camp.fr">
     <g id="Bridge">
       <g id="Layer_29" data-name="Layer 29">
@@ -412,89 +494,4 @@
       <text/>
     </g>
   </g>
-      </svg>
-
-      <!-- MAP - IMG 
-        
-      <img src="images/SVG/map-with-border-final.svg" alt="Illustrated map of Aulus-les-Bains" class="map-image"/>
-      
-      
-       MAKING COMMENT WHILE I EXPERIMENT -->
-
-      <!-- Map Illustrations -->
-
-      <img 
-        src="images/SVG/church-with-border-final.svg" 
-        alt="Illustration of Church" 
-        id="church" 
-        class="location"
-        data-title="Saint Vincent Church"
-        data-text="Some text here. Blah Blah Blah"
-        data-audio="audio/streambox-owl.wav"
-      />
-
-      <img 
-        src="images/SVG/camp-residence-with-border.svg" 
-        alt="Illustration of Camp Residence" 
-        id="camp-residence" 
-        class="location"
-        data-title="Camp Residence"
-        data-text="Clip 2: This is an audio recording of the sound of  the electromagnetic waves from the break box outside my room. Recorded using EM mic."
-        data-audio="audio/ems-camp.mp3"
-      />
-
-      <img 
-        src="images/SVG/big-cave-with-border.svg" 
-        alt="Illustration of Thermal Caves" 
-        id="big-cave" 
-        class="location"
-        data-title="Thermes d'Aulus les Bains"
-        data-text="Clip 3: This is an audio recording of sounds recorded from an abandoned cave using a streambox that was left there overnight."
-        data-audio=""
-      />
-
-      <img 
-        src="images/SVG/small-cave-with-border.svg"
-        alt="Illustration of smaller caves near Thermal Caves" 
-        id="small-cave" 
-        class="location"
-        data-title="Small Caves Near Thermes d'Aulus les Bains"
-        data-text="Clip 3: This is an audio recording of sounds recorded from an abandoned cave using a streambox that was left there overnight."
-        data-audio=""
-      />
-
-    </div>
-
-  <!-- LOCATION POPUP BOX -->
-
-  <div id="popup" class="hidden">
-    <h2 id="popup-title"></h2>
-    <p id="popup-text"></p>
-    <audio id="popup-audio" controls></audio>
-    <button id="close-btn" aria-label="Close popup">&times;</button>
-  </div>
-
-  <!-- OPTIONAL VIDEO OF SUBMERGED: 
-   
-  <div class="video">
-    <h2>
-      Submerged
-    </h2>
-    <video controls>
-      <source src="" type="video/mp4" >
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE-->
-  
-  <!--TO WORK ON LATER IF I HAVE TIME-->
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
-  <script src="scripts/scripts.js"></script>
-
-
-  </body>
-</html>
+</svg>

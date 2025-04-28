@@ -1,6 +1,6 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
-
+/* 
 /* POPUP - GLOBALS */
 const locations = document.querySelectorAll('.location');
 const popup = document.getElementById('popup');
@@ -10,7 +10,6 @@ const popupAudio = document.getElementById('popup-audio');
 const closeBtn = document.getElementById('close-btn');
 
 /* MAP - CLICK ZOOM GLOBALS */
-const map = document.getElementById("map");
 const mainBorder = document.getElementById("Main_Border");
 const secondBorder = document.getElementById("Second_Border");
 const church = document.getElementById("church");
@@ -50,7 +49,11 @@ closeBtn.addEventListener('click', () => {
 });
 
 
-/* MAP - CLICK ZOOM FUNCTIONALITY */
+
+/* MAP - ZOOM FUNCTIONALITY */
+
+
+/* TRIED SOMETHING BASED ON (link here: ). MADE MY HEAD HURT 
 
 let churchClicked=false; 
 let campResidenceClicked=false;
@@ -108,6 +111,110 @@ campResidence.addEventListener("click", function(){
     revertAll();
   }
   console.log(campResidenceClicked);
+});
+
+*/
+
+
+/* Code reference: https://github.com/anvaka/panzoom */
+
+const map = document.getElementById('map-illustration');
+
+let topLeft = {x: 0, y: 0};
+let topRight = {x: 1, y: 0};
+let bottomLeft = {x: 0, y: 1};
+let bottomRight = {x: 1, y: 1};
+let centerCenter = {x: 0.5, y: 0.5};
+
+const mapZoom = panzoom(map, {
+  maxZoom: 2,
+  minZoom: 0.7,
+  initialX: 550,
+  initialY: 300,
+  initialZoom: 0.02,
+  bounds: true,
+  boundsPadding: 0.02
+});
+
+// minZoom: 0.7,
+
+const mapIllustration = document.getElementById('map-svg');
+
+//mapZoom.moveTo(-320,-120);
+//mapZoom.zoomAbs(0.5, 7, 0.7);
+
+
+//map svg initial position
+
+
+// function to get the illustration's center
+
+/*
+
+const startMoveX = -90;
+const startMoveY = -90;
+const startCenterX = 950;
+const startCenterY = 500;
+const startScale = 0.7;
+
+mapZoom.moveTo(startMoveX, startMoveY);
+mapZoom.zoomAbs(startCenterX, startCenterY, startScale);
+
+
+  function getMapCenter() {
+  const bbox = map.getBBox();
+  const centerX = bbox.x + bbox.width / 2;
+  const centerY = bbox.y + bbox.height / 2;
+  return { x: centerX, y: centerY };
+}
+
+const center = getMapCenter();
+
+
+*/
+
+
+// map control buttons 
+
+//zoom in
+document.getElementById('zoom-in').addEventListener('click', function () {
+  mapZoom.smoothZoom(center.x, center.y, 1.2);
+});
+
+//zoom out
+document.getElementById('zoom-out').addEventListener('click', function () {
+  const center = getMapCenter();
+  mapZoom.smoothZoom(center.x, center.y, 0.8);
+});
+
+//reset button 
+document.getElementById('reset').addEventListener('click', function () {
+  mapZoom.moveTo(10,20);
+  mapZoom.zoomAbs(-200, -100, 0.7);
+});
+
+
+
+mapZoom.on('panstart', function(e) {
+  console.log('Fired when pan is just started ', e);
+  // Note: e === instance.
+});
+
+mapZoom.on('pan', function(e) {
+  console.log('Fired when the scene is being panned', e);
+});
+
+mapZoom.on('panend', function(e) {
+  console.log('Fired when pan ended', e);
+});
+
+mapZoom.on('zoom', function(e) {
+  console.log('Fired when scene is zoomed', e);
+});
+
+mapZoom.on('transform', function(e) {
+  // This event will be called along with events above.
+  console.log('Fired when any transformation has happened', e);
 });
 
 

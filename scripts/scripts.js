@@ -24,7 +24,7 @@ locations.forEach(loc => {
   loc.addEventListener('click', () => {
 
     locations.forEach(l => l.classList.remove('active'));
-
+    console.log('popups firing.')
     loc.classList.add('active');
 
     const title = loc.getAttribute('data-title');
@@ -144,6 +144,7 @@ campResidence.addEventListener("click", function(){
 
 
 const map = document.getElementById('map-illustration');
+const mapIllustration = document.getElementById('map-svg');
 
 // map control buttons 
 const resetBtn = document.getElementById('reset');
@@ -152,21 +153,26 @@ let topLeft = {x: 0, y: 0};
 let topRight = {x: 1, y: 0};
 let bottomLeft = {x: 0, y: 1};
 let bottomRight = {x: 1, y: 1};
-let centerCenter = {x: 0.5, y: 0.5};
+let centerCenter = {x: 0, y: 0};
 
-const mapZoom = panzoom(map, {
-  maxZoom: 2,
-  minZoom: 0.7,
-  initialX: 550,
-  initialY: 300,
-  initialZoom: 0.02,
+const mapZoom = panzoom(mapIllustration, {
+  maxZoom: 5,
+  minZoom: 2,
+  initialZoom: 2,
   bounds: true,
-  boundsPadding: 0.02
+  boundsPadding: 0.02,
+  // now all zoom operations will happen based on the center of the screen
+  transformOrigin: centerCenter
 });
 
-// minZoom: 0.7,
+ 
 
-const mapIllustration = document.getElementById('map-svg');
+// minZoom: 0.7,
+//initialX: 550,
+//initialY: 300,
+//  transformOrigin: centerCenter
+
+
 
 
 
@@ -190,19 +196,20 @@ const startScale = 0.7;
 mapZoom.moveTo(startMoveX, startMoveY);
 mapZoom.zoomAbs(startCenterX, startCenterY, startScale);
 
-
-  function getMapCenter() {
+function getMapCenter() {
   const bbox = map.getBBox();
   const centerX = bbox.x + bbox.width / 2;
   const centerY = bbox.y + bbox.height / 2;
   return { x: centerX, y: centerY };
 }
 
+  
+
+
 const center = getMapCenter();
 
 
 */
-
 
 
 

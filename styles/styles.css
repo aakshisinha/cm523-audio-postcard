@@ -237,23 +237,49 @@ animation: dance 0.6s infinite ease-in-out;
 /* MAP SVG STYLING */
 
 #map-container {
-  width: 100%;
+  overflow: hidden;
+  width: 65rem;
+  height: 40rem;
+  position: relative; 
+  overflow: hidden;
+  padding-bottom: 0;
+  border: 5px solid #B2CB21;
+  border-radius: 10px;
+  background-color: #dde89d;
+}
+
+#map-svg {
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+
+
+/*
+#map-container {
+  width: 90%;
   padding-top: 56.25%;
   position: relative; 
   overflow: hidden;
   padding-bottom: 0;
+
+
+
+#map-illustration {
+  width: 1080px;
+  height:  620px;
 }
 
 #map-illustration {
   display: block;
 }
-
-/*
-#map-illustration {
-  width: 1080px;
-  height:  620px;
-}
-*/
 
 svg {
   position: absolute;
@@ -268,150 +294,163 @@ svg {
   background-color: #dde89d;
 }
 
+
+*/
+
+
+
 /* 
 width: 1080px;
 height: 620px;
 */
 
-.cls-1 {
-  fill: #c1cc99;
-}
-
-.cls-2 {
-  fill: #eed8a2;
-  stroke: #e4c16c;
-}
-
-.cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13 {
   stroke-miterlimit: 10;
 }
 
-.cls-2, .cls-5, .cls-12 {
-  stroke-width: 4px;
-}
-
-.cls-3, .cls-4, .cls-7, .cls-8, .cls-11 {
-  fill: #ccc;
-}
-
-.cls-3, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-13 {
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-10 {
   stroke-width: 3px;
 }
 
-.cls-3, .cls-13 {
-  stroke: #999;
+.cls-1, .cls-6 {
+  stroke: #818181;
+}
+
+.cls-1, .cls-10 {
+  fill: #b4b4b4;
+}
+
+.cls-14, .cls-15, .cls-13 {
+  fill: #fefce9;
+}
+
+.cls-2 {
+  fill: #79b1e0;
+  stroke: #79b1e0;
+}
+
+.cls-3 {
+  fill: #dae3a4;
+}
+
+.cls-3, .cls-11, .cls-12, .cls-13 {
+  stroke: #b1ca35;
 }
 
 .cls-15 {
-  font-size: 41.34px;
+  font-size: 28.79px;
 }
 
-.cls-15, .cls-16, .cls-14 {
-  fill: #ffffe8;
-}
-
-.cls-15, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+.cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
   font-family: Neucha, Neucha;
 }
 
-.cls-4 {
-  stroke: #b8b9b9;
+.cls-27, .cls-11 {
+  fill: #75ba5b;
 }
 
-.cls-4, .cls-11 {
-  stroke-width: 2px;
+.cls-28 {
+  fill: #b1ca35;
 }
 
-.cls-27 {
-  fill: #b2cb21;
+.cls-4, .cls-5, .cls-6, .cls-7, .cls-9 {
+  fill: #ccc;
 }
 
-.cls-5, .cls-28 {
-  fill: #84b866;
+.cls-4, .cls-10 {
+  stroke: #989898;
 }
 
-.cls-5, .cls-10, .cls-12, .cls-14 {
-  stroke: #b2cb21;
+.cls-16 {
+  font-size: 18.8px;
 }
 
-.cls-29, .cls-12 {
-  fill: #84b866;
-}
-
-.cls-6, .cls-7 {
-  stroke: gray;
-}
-
-.cls-6, .cls-13 {
-  fill: #b3b3b3;
-}
-
-.cls-30 {
-  fill: #e4c16c;
-}
-
-.cls-31 {
-  fill: #e4c16c;
+.cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+  fill: #010101;
 }
 
 .cls-17 {
-  font-size: 32.52px;
+  font-size: 18.8px;
 }
 
 .cls-18 {
-  font-size: 32.32px;
+  font-size: 17.61px;
 }
 
 .cls-19 {
-  font-size: 30.59px;
+  font-size: 17.42px;
 }
 
 .cls-20 {
-  font-size: 36px;
+  font-size: 17.5px;
 }
 
 .cls-21 {
-  font-size: 25.29px;
+  font-size: 16.81px;
 }
 
 .cls-22 {
-  font-size: 25.14px;
+  font-size: 22.5px;
 }
 
 .cls-23 {
-  font-size: 25.02px;
+  font-size: 22.65px;
 }
 
 .cls-24 {
-  font-size: 24.14px;
+  font-size: 21.3px;
 }
 
 .cls-25 {
-  font-size: 27px;
-}
-
-.cls-8 {
-  stroke: #b3b3b3;
-}
-
-.cls-9 {
-  fill: #78b1e1;
-  stroke: #78b1e1;
-}
-
-.cls-10 {
-  fill: #dde89d;
-}
-
-.cls-11 {
-  stroke: #ccc;
+  font-size: 25.07px;
 }
 
 .cls-26 {
-  font-size: 48px;
+  font-size: 33.42px;
 }
 
-.cls-14 {
+.cls-29 {
+  fill: #e4c16b;
+}
+
+.cls-5 {
+  stroke: #b4b4b4;
+}
+
+.cls-30 {
+  fill: #bfcc93;
+}
+
+.cls-7 {
+  stroke: #b8baba;
+}
+
+.cls-7, .cls-9 {
+  stroke-width: 2px;
+}
+
+.cls-8 {
+  fill: #edd59d;
+  stroke: #e4c16b;
+}
+
+.cls-8, .cls-11, .cls-12 {
+  stroke-width: 4px;
+}
+
+.cls-9 {
+  stroke: #ccc;
+}
+
+.cls-31 {
+  fill: #ebbf5c;
+}
+
+.cls-32, .cls-12 {
+  fill: #84b966;
+}
+
+.cls-13 {
   stroke-width: 9px;
 }
 
@@ -537,7 +576,7 @@ height: 620px;
 
 @media screen and (max-width: 1200px) {
 
-  svg {
+  #map-container {
     width: 800px;
     height:  500px;
   }
@@ -547,7 +586,7 @@ height: 620px;
 
 @media screen and (max-width: 950px) {
 
-  svg {
+  #map-container {
     width: 400px;
     height:  300px;
   }

@@ -40,12 +40,34 @@ locations.forEach(loc => {
   });
 });
 
+function closePopup() {
+  popup.classList.remove('active');
+}
+
+
 closeBtn.addEventListener('click', () => {
   popup.classList.add('hidden');
   popupAudio.pause();
   popupAudio.currentTime = 0;
 
-  locations.forEach(loc => loc.classList.remove('active'));
+  closePopup();
+});
+
+/* ESCAPE KEY FUNCTIONALITY */
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    if (!popup.classList.contains('hidden')) {
+      popup.classList.add('hidden');
+      popupAudio.pause();
+      popupAudio.currentTime = 0;
+      closePopup();
+    }
+
+    resetMapZoom();
+
+  }
+
 });
 
 
@@ -118,7 +140,13 @@ campResidence.addEventListener("click", function(){
 
 /* Code reference: https://github.com/anvaka/panzoom */
 
+/* MAP GLOBALS */
+
+
 const map = document.getElementById('map-illustration');
+
+// map control buttons 
+const resetBtn = document.getElementById('reset');
 
 let topLeft = {x: 0, y: 0};
 let topRight = {x: 1, y: 0};
@@ -139,6 +167,8 @@ const mapZoom = panzoom(map, {
 // minZoom: 0.7,
 
 const mapIllustration = document.getElementById('map-svg');
+
+
 
 //mapZoom.moveTo(-320,-120);
 //mapZoom.zoomAbs(0.5, 7, 0.7);
@@ -174,7 +204,7 @@ const center = getMapCenter();
 */
 
 
-// map control buttons 
+
 
 //zoom in
 document.getElementById('zoom-in').addEventListener('click', function () {
@@ -188,10 +218,14 @@ document.getElementById('zoom-out').addEventListener('click', function () {
 });
 
 //reset button 
-document.getElementById('reset').addEventListener('click', function () {
+
+function resetMapZoom() {
   mapZoom.moveTo(10,20);
   mapZoom.zoomAbs(-200, -100, 0.7);
-});
+}
+
+
+resetBtn.addEventListener('click', resetMapZoom);
 
 
 

@@ -62,8 +62,10 @@
 
       <!-- MAP - SVG Experiment -->
 
+
       <?xml version="1.0" encoding="UTF-8"?>
         <svg id="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
+          
           <g id="map-illustration" transform="translate(-200, -150) scale(1.2)">
           <g id="Map">
             <g id="Second_Border" data-name="Second Border">
@@ -414,6 +416,7 @@
                 <text/>
               </g>
             </g>
+
           <!-- MAP LOCATION ILLUSTRATIONS -->
             <g>
               <image 
@@ -423,7 +426,7 @@
               id="camp-residence"
               alt="Illustration of Camp Residence" 
               data-title="Camp Residence"
-              data-text="Clip 2: This is an audio recording of the sound of  the electromagnetic waves from the break box outside my room. Recorded using EM mic."
+              data-text="This is the sound of the electromagnetic waves from the break box outside my room. Recorded using EM mic."
               data-audio="audio/ems-camp.mp3"
               href="images/SVG/camp-residence-with-border.svg"/>
             </g>
@@ -435,8 +438,8 @@
               id="big-cave"
               alt="Illustration of Thermal Caves" 
               data-title="Thermes d'Aulus les Bains"
-              data-text="Clip 3: This is an audio recording of sounds recorded from an abandoned cave using a streambox that was left there overnight."
-              data-audio=""
+              data-text="This is the sound from an abandoned cave using a streambox (like a radio in a box so it streams live!)."
+              data-audio="audio/streambox-owl.wav"
               href="images/SVG/big-cave-with-border.svg"/>
             </g>
             <g>
@@ -446,8 +449,8 @@
               class="location" id="small-cave"
               alt="Illustration of smaller caves near Thermal Caves" 
               data-title="Small Caves Near Thermes d'Aulus les Bains"
-              data-text="Clip 3: This is an audio recording of sounds recorded from an abandoned cave using a streambox that was left there overnight."
-              data-audio=""
+              data-text="This is the sound from a smaller abandoned cave near the big one using a streambox (like a radio in a box so it streams live)."
+              data-audio="audio/streambox-owl.wav"
               href="images/SVG/small-cave-with-border.svg"/>
             </g>
             <g>
@@ -458,12 +461,17 @@
               id="church"
               alt="Illustration of Church" 
               data-title="Saint Vincent Church"
-              data-text="Some text here. Blah Blah Blah"
-              data-audio="audio/streambox-owl.wav"
+              data-text="This is the song the church bells played at noon and midnight everyday. I recorded this in my room with my phone's voice memo app."
+              data-audio="audio/church-song.m4a"
               href="images/SVG/church-with-border-final.svg"/>
             </g>
           </g>
         </svg>
+        <div id="map-controls">
+          <button id="zoom-in">+</button>
+          <button id="zoom-out">-</button>
+          <button id="reset">Reset</button>
+        </div>
 
 
       </div>
@@ -523,16 +531,14 @@
 
       -->
 
+      
+
     </div>
 
 
     <!-- MAP CONTROLS -->
 
-    <div id="map-controls">
-      <button id="zoom-in">+</button>
-      <button id="zoom-out">-</button>
-      <button id="reset">Reset</button>
-    </div>
+  
 
 
 

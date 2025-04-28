@@ -229,8 +229,8 @@ animation: dance 0.6s infinite ease-in-out;
   padding: 2px 20px;
   background-color: #D1FFF7;
   position: absolute;
-  top: 65%;
-  left: 71.5%;
+  top: 2%;
+  left: 69%;
 }
 
 
@@ -242,6 +242,10 @@ animation: dance 0.6s infinite ease-in-out;
   position: relative; 
   overflow: hidden;
   padding-bottom: 0;
+}
+
+#map-illustration {
+  display: block;
 }
 
 /*

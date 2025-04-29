@@ -698,11 +698,12 @@ height: 620px;
 
   #map-controls {
     display: none;
+    
   }
 
   #popup {
     margin: 0;
-    padding: 1%;
+    padding: 0.5%;
     width: 190px;
   }
 

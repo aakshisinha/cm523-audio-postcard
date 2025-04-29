@@ -227,7 +227,7 @@ const center = getMapCenter();
 */
 
 //zoom in
-document.getElementById('zoom-in').addEventListener('click', function () {
+document.getElementById('zoom-in').addEventListener('pointerdown', function () {
   const rect = mapBox.getBoundingClientRect();
   const centerX = rect.width / 2;
   const centerY = rect.height / 2;
@@ -235,7 +235,7 @@ document.getElementById('zoom-in').addEventListener('click', function () {
 });
 
 //zoom out
-document.getElementById('zoom-out').addEventListener('click', function () {
+document.getElementById('zoom-out').addEventListener('pointerdown', function () {
   const rect = mapBox.getBoundingClientRect();
   const centerX = rect.width / 2;
   const centerY = rect.height / 2;

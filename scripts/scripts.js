@@ -20,8 +20,10 @@ const smallCave = document.getElementById("small-cave");
 
 /* POPUP GENERATOR */
 
+
+
 locations.forEach(loc => {
-  loc.addEventListener('click', () => {
+  loc.addEventListener('pointerdown', () => {
 
     locations.forEach(l => l.classList.remove('active'));
     console.log('popups firing.')
@@ -45,7 +47,7 @@ function closePopup() {
 }
 
 
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('pointerdown',  () => {
   popup.classList.add('hidden');
   popupAudio.pause();
   popupAudio.currentTime = 0;
@@ -143,7 +145,7 @@ campResidence.addEventListener("click", function(){
 /* MAP GLOBALS */
 
 
-const map = document.getElementById('map-illustration');
+const mapBox = document.getElementById('map-container');
 const mapIllustration = document.getElementById('map-svg');
 
 // map control buttons 
@@ -161,9 +163,17 @@ const mapZoom = panzoom(mapIllustration, {
   initialZoom: 2,
   bounds: true,
   boundsPadding: 0.02,
+  viewportSelector: '#map-container',
   // now all zoom operations will happen based on the center of the screen
   transformOrigin: centerCenter
 });
+
+const initialPosition = {
+  x: mapZoom.getTransform().x,
+  y: mapZoom.getTransform().y,
+  scale: mapZoom.getTransform().scale
+};
+
 
  
 
@@ -209,26 +219,37 @@ function getMapCenter() {
 const center = getMapCenter();
 
 
+/* reference for figuring out zoom in zoom out using rectangle function: 
+   1. https://github.com/anvaka/panzoom/issues/69
+   2. https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+   3. https://developer.mozilla.org/en-US/docs/Web/API/Element/currentCSSZoom
+
 */
-
-
 
 //zoom in
 document.getElementById('zoom-in').addEventListener('click', function () {
-  mapZoom.smoothZoom(center.x, center.y, 1.2);
+  const rect = mapBox.getBoundingClientRect();
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  mapZoom.smoothZoom(centerX, centerY, 1.2);
 });
 
 //zoom out
 document.getElementById('zoom-out').addEventListener('click', function () {
-  const center = getMapCenter();
-  mapZoom.smoothZoom(center.x, center.y, 0.8);
+  const rect = mapBox.getBoundingClientRect();
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  mapZoom.smoothZoom(centerX, centerY, 0.9);
 });
+
+
+
 
 //reset button 
 
 function resetMapZoom() {
-  mapZoom.moveTo(10,20);
-  mapZoom.zoomAbs(-200, -100, 0.7);
+  mapZoom.moveTo(initialPosition.x, initialPosition.y);
+  mapZoom.zoomAbs(0, 0, initialPosition.scale);
 }
 
 

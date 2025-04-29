@@ -696,6 +696,10 @@ height: 620px;
     margin-left: 3%;
   }
 
+  #map-controls {
+    display: none;
+  }
+
   #popup {
     margin: 0;
     padding: 1%;

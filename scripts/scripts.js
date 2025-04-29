@@ -253,7 +253,7 @@ function resetMapZoom() {
 }
 
 
-resetBtn.addEventListener('click', resetMapZoom);
+resetBtn.addEventListener('pointerdown', resetMapZoom);
 
 
 

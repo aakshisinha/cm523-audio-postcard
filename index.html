@@ -44,27 +44,16 @@
       <p>This interactive map features sounds I recorded in southern French town, Aulus-les-Bains, during my stay at  <a href="https://www.campfr.com/">Camp FR.</a></p>
       <p>Click on the map below to start exploring Aulus.</p>
     </div>
-    
-   
-
-    <!-- MAP - EXPERIMENT -->
-
-
 
     <!-- MAP -->
 
     <div id="map-container">
 
+          <!-- MAP - EXPERIMENT -->
+
       <!-- ANIMATED RIVER EXPERIMENT w/p5.js 
          <div id="p5-river"></div> - meh don't have time to learn p5.js right now. maybe something to keep tinkering with over the summer.
-
-         svg id="map-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet">
-         
-         <g id="map-illustration" transform="translate(-200, -150) scale(1.2)">
-      
-      
          -->
-
 
       <!-- MAP - SVG Experiment -->
 
@@ -386,11 +375,13 @@
       <text/>
 
 
-        <!-- MAP LOCATION ILLUSTRATIONS -->
+        <!-- MAP LOCATION ILLUSTRATIONS 
+          note for future: maybe make them an svg file or <g> or something else instead of being in the <image> tag? it's making the location illustrations hard to animate.
+        -->
 
         <g>
           <image 
-          width="100" height="100"
+          width="120" height="120"
           x="390" y="270"
           alt="Illustration of Camp Residence" 
           class="location" id="camp-residence"
@@ -398,7 +389,6 @@
           data-text="This is the sound of the electromagnetic waves from the break box outside my room. Recorded using EM mic."
           data-audio="audio/ems-camp.mp3"
           href="images/SVG/SVG/CAMP RES ILLUSTRATION.svg"/>
-    
         </g>
 
         <g>
@@ -445,17 +435,18 @@
         <div id="map-controls">
           <button id="zoom-in">+</button>
           <button id="zoom-out">-</button>
-          <button id="reset">Reset</button>
+          <button id="reset" class="reset">Reset</button>
         </div>
 
         <div id="popup" class="hidden">
           <h2 id="popup-title"></h2>
           <p id="popup-text"></p>
           <audio id="popup-audio" controls></audio>
-          <button id="close-btn" aria-label="Close popup">&times;</button>
+          <button id="close-btn">&times;</button>
         </div>
 
       </div>
+
 
 
         <!-- LOCATION POPUP BOX -->

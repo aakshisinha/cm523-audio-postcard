@@ -25,8 +25,8 @@ const smallCave = document.getElementById("small-cave");
 locations.forEach(loc => {
   loc.addEventListener('pointerdown', () => {
 
-    locations.forEach(l => l.classList.remove('active'));
-    console.log('popups firing.')
+    locations.forEach(l => l.classList.remove('hidden'));
+    console.log('popup open')
     loc.classList.add('active');
 
     const title = loc.getAttribute('data-title');
@@ -51,6 +51,7 @@ closeBtn.addEventListener('pointerdown',  () => {
   popup.classList.add('hidden');
   popupAudio.pause();
   popupAudio.currentTime = 0;
+  console.log('popup closing.')
 
   closePopup();
 });

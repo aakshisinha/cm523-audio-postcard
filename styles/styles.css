@@ -111,6 +111,11 @@ p {
 
 /* INDIVIDUAL LOCATIONS - HOVER & ACTIVE */
 
+
+
+
+
+
 /*.location {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -167,7 +172,7 @@ animation: dance 0.6s infinite ease-in-out;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 
@@ -188,7 +193,9 @@ animation: dance 0.6s infinite ease-in-out;
   }
 
 
-/* VIDEO - SUBMERGED */
+/* VIDEO - SUBMERGED 
+
+Something to add in later.
 
 
 .video h2 {
@@ -215,6 +222,8 @@ animation: dance 0.6s infinite ease-in-out;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+*/
 
 /* MAP BUTTONS */
 
@@ -468,13 +477,22 @@ height: 620px;
 }
 
 
-/* MAP - INTERACTION (EXPERIMENT) */
+/* MAP - INTERACTION */
 
+.location {
+  animation: MoveUpDown 1s linear infinite;}
 
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
 
 
 /*
-
 #city-plane {
     cursor: pointer;
     transition: stroke 0.4s ease, stroke-width 0.4s ease; 
@@ -496,9 +514,6 @@ height: 620px;
     stroke-width: 5;
     filter: drop-shadow(0 0 8px #ccc);
 }
-
-
-
 */
 
 
@@ -638,6 +653,9 @@ height: 620px;
     left: 70%;
   }
   
+  #map-controls-phone {
+    display: none;
+  }
 }
 
 
@@ -655,7 +673,6 @@ height: 620px;
     left: 63%;
     font-size: 1.5em;
   }
-
   #popup {
     margin: 0;
     padding: 2%;
@@ -686,31 +703,23 @@ height: 620px;
 
 @media screen and (max-width: 510px) {
   
- 
+
+.project-documentation {
+  font-size: 0.7em;
+}
+
+#popup {
+  margin: 0;
+  padding: 2%;
+  width: 200px;
+  top: 20%;
+  left: 10%;
+}
+
   
-  #map-container {
-    width: 420px;
-    height:  250px;
-    margin-right: 3%;
-    margin-left: 3%;
-  }
-
-  #map-controls {
-    top: 1%;
-    left: 50%;
-    font-size: 1em;
-  }
-
-  #popup {
-    margin: 0;
-    padding: 0.5%;
-    width: 170px;
-    padding-left: 10%;
-  }
-
   #popup audio {
     width: 150px;
-    padding-left: 4%;
+    padding-left: 12%;
   }
 
   #popup h2 {
@@ -720,9 +729,6 @@ height: 620px;
 
   #popup p {
     font-size: 1.3em;
-    padding-left: 5%;
-    padding-right: 2%;
-
   }
 
   #popup #close-btn {
